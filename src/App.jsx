@@ -8,11 +8,12 @@ import UserGreeting from "./UserGreeting";
 import List from "./List";
 import ProfilePicture from "./ProfilePicture";
 import MyComponent from "./MyComponent";
+import CounterApp from "./CounterApp";
 
 function App() {
 
   return (
-    <MyComponent/>
+    <CounterApp/>
   );
 }
 

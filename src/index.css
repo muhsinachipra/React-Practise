@@ -61,3 +61,34 @@
   color: rgba(0, 0, 0, 0.404);
   cursor: pointer;
 }
+
+.counter-container {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  border: 2px solid black;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.counter-display {
+  font-size: 6em;
+  margin-top: 0;
+  margin-bottom: 50px;
+}
+
+.counter-button {
+  width: 150px;
+  height: 50px;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 0px 5px;
+  background-color: hsl(199, 100%, 58%);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.counter-button:hover {
+  background-color: hsl(197, 100%, 48%);
+}
