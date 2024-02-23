@@ -4,16 +4,13 @@ import Food from './Food';
 import Card from './Card';
 import Button from './Button/Button';
 import Student from './Student';
+import UserGreeting from './UserGreeting';
 
 function App() {
 
   return (
     <>
-    <Student name= "SpongeBob" age={30} isStudent={true}/>
-    <Student name= "patrick" age={45} isStudent={false}/>
-    <Student name= "Squidward" age={50} isStudent={false}/>
-    <Student name= "Sandy" age={21} isStudent={true}/>
-    <Student name= 'larry'/>
+    <UserGreeting isLogged={true} name='Muhsin'/>
     </>
   );
 }
