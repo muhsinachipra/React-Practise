@@ -16,24 +16,48 @@
   margin-bottom: 10px;
 }
 
-.card .card-title{
+.card .card-title {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   color: hsl(0, 0%, 20%);
 }
 
-.card .card-text{
+.card .card-text {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: hsl(0, 0%, 30%);
 }
 
-.student{
+.student {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-size: 2em;
   padding: 10px;
   border: 1px solid hsl(0, 0%, 50%, 0.8);
 }
 
-.student p{
+.student p {
   margin: 0;
+}
+
+.list-category {
+  text-align: center;
+  font-size: 2.0em;
+  font-weight: bold;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: black;
+  margin-bottom: 10px;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+.list-items {
+  font-size: 1.5em;
+  list-style: none;
+  text-align: center;
+  margin: 0px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.list-items li:hover {
+  color: rgba(0, 0, 0, 0.404);
+  cursor: pointer;
 }
