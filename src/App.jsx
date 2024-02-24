@@ -9,11 +9,12 @@ import List from "./List";
 import ProfilePicture from "./ProfilePicture";
 import MyComponent from "./MyComponent";
 import CounterApp from "./CounterApp";
+import OnChange from "./OnChange";
 
 function App() {
 
   return (
-    <CounterApp/>
+    <OnChange/>
   );
 }
 
