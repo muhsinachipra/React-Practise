@@ -92,3 +92,36 @@
 .counter-button:hover {
   background-color: hsl(197, 100%, 48%);
 }
+
+.color-picker-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.color-picker-container h2{
+  font-size: 2.5rem;
+  margin: 50px;
+}
+.color-picker-container label{
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.color-display{
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  transition: 0.25s ease;
+}
+
+input[type="color"]{
+  width: 100px;
+}
