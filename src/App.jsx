@@ -15,12 +15,12 @@ import ColorPicker from "./ColorPicker";
 import Fruits from "./Fruits";
 import Cars from "./Cars";
 import ToDoList from "./ToDoList";
+import A1 from "./Assignment/A1";
+import A2 from "./Assignment/A2";
 
 function App() {
-
-  return (
-    <ToDoList/>
-  );
+  
+  return (<A2/>);
 }
 
 export default App;
