@@ -12,11 +12,12 @@ import MyComponent2 from "./MyComponent2";
 import CounterApp from "./CounterApp";
 import OnChange from "./OnChange";
 import ColorPicker from "./ColorPicker";
+import Fruits from "./Fruits";
 
 function App() {
 
   return (
-    <MyComponent2/>
+    <Fruits/>
   );
 }
 
