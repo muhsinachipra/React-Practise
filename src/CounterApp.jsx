@@ -5,10 +5,14 @@ export default function CounterApp() {
     const [count,setCount] =useState(0)
 
     const Increament= () => {
-        setCount(count+1)
+        setCount(c => c + 1)
+        setCount(c => c + 1)
+        setCount(c => c + 1)
     }
     const Decreament= () => {
-        setCount(count-1)
+        setCount(c => c - 1)
+        setCount(c => c - 1)
+        setCount(c => c - 1)
     }
     const Reset= () => {
         setCount(0)
