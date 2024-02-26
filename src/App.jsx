@@ -13,11 +13,12 @@ import CounterApp from "./CounterApp";
 import OnChange from "./OnChange";
 import ColorPicker from "./ColorPicker";
 import Fruits from "./Fruits";
+import Cars from "./Cars";
 
 function App() {
 
   return (
-    <Fruits/>
+    <Cars/>
   );
 }
 
