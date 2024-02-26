@@ -8,6 +8,7 @@ import UserGreeting from "./UserGreeting";
 import List from "./List";
 import ProfilePicture from "./ProfilePicture";
 import MyComponent from "./MyComponent";
+import MyComponent2 from "./MyComponent2";
 import CounterApp from "./CounterApp";
 import OnChange from "./OnChange";
 import ColorPicker from "./ColorPicker";
@@ -15,7 +16,7 @@ import ColorPicker from "./ColorPicker";
 function App() {
 
   return (
-    <CounterApp/>
+    <MyComponent2/>
   );
 }
 
