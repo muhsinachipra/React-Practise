@@ -20,12 +20,13 @@ import A2 from "./Assignment/A2";
 import MC3 from "./UseEffect";
 import DigitalClock from "./DigitalClock";
 import ComponentA from "./ComponentA";
+import RefHook from "./RefHook";
 
 function App() {
 
   return (
     <>
-      <ComponentA />
+      <RefHook />
     </>
   );
 }
