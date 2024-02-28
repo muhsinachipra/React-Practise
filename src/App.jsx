@@ -19,12 +19,13 @@ import A1 from "./Assignment/A1";
 import A2 from "./Assignment/A2";
 import MC3 from "./UseEffect";
 import DigitalClock from "./DigitalClock";
+import ComponentA from "./ComponentA";
 
 function App() {
 
   return (
     <>
-      <DigitalClock />
+      <ComponentA />
     </>
   );
 }

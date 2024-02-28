@@ -1,3 +1,7 @@
+/*-------------------- Counter App --------------------------------*/
+
+
+
 /* .card {
   border: 1px solid hsl(0, 0%, 80%);
   border-radius: 10px;
@@ -238,7 +242,7 @@ li {
 
 
 
-body {
+/* body {
   background-image: url(assets/clockimg.jpg);
   background-position: center;
   background-repeat: no-repeat;
@@ -255,7 +259,6 @@ body {
 .clock-container {
   backdrop-filter: blur(1px);
   width: 100vw;
-  /* padding: 10px 0; */
 }
 
 .clock{
@@ -265,4 +268,18 @@ body {
   font-family: monospace;
   text-align: center;
   text-shadow: 3px 3px 5px hsl(0, 0%, 0%, 0.75);
+} */
+
+
+
+
+/*-------------------- Component Box --------------------------------*/
+
+
+
+
+
+.box {
+  border: 3px solid;
+  padding: 25px;
 }
