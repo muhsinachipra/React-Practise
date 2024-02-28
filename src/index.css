@@ -142,7 +142,7 @@ input[type="color"]{
 
 
 
-/* body {
+body {
   background-color: hsl(0, 0%, 10%);
 }
 
@@ -170,6 +170,7 @@ button {
 
 .add-button {
   background-color: hsl(125, 47%, 54%);
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .add-button:hover {
@@ -194,6 +195,7 @@ button {
 
 input[type="text"] {
   font-size: 1.6rem;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   padding: 10px;
   border: 2px solid hsla(0, 0%, 80%, 0.5);
   border-radius: 5px;
@@ -222,10 +224,11 @@ li {
 
 .delete-button,
 .move-button {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   padding: 8px 12px;
   font-size: 1.4rem;
   margin-left: 10px;
-} */
+}
 
 
 
@@ -291,7 +294,7 @@ li {
 
 
 
-body {
+/* body {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -352,4 +355,4 @@ body {
 
 .reset-button:hover {
   background-color: hsl(205, 90%, 55%);
-}
+} */

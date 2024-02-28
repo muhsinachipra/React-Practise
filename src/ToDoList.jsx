@@ -1,8 +1,17 @@
 import React, { useEffect, useState } from "react";
 
 export default function ToDoList() {
-    const [tasks, setTasks] = useState([])
+
+    const [tasks, setTasks] = useState(() => {
+        const storedTasks = localStorage.getItem('tasks');
+        return storedTasks ? JSON.parse(storedTasks) : []
+    })
+
     const [newTask, setNewTask] = useState("")
+
+    useEffect(() => {
+        localStorage.setItem('tasks', JSON.stringify(tasks))
+    }, [tasks])
 
     const handleInputChange = (event) => {
         setNewTask(event.target.value)
