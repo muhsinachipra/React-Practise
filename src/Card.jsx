@@ -1,6 +1,6 @@
 import ProPic from './assets/Image.jpg'
 
-function Card (){
+function Card() {
 
     return (
         <div className="card">

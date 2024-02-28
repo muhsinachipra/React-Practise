@@ -18,10 +18,15 @@ import ToDoList from "./ToDoList";
 import A1 from "./Assignment/A1";
 import A2 from "./Assignment/A2";
 import MC3 from "./UseEffect";
+import DigitalClock from "./DigitalClock";
 
 function App() {
-  
-  return (<MC3/>);
+
+  return (
+    <>
+      <DigitalClock />
+    </>
+  );
 }
 
 export default App;
