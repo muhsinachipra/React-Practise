@@ -17,10 +17,11 @@ import Cars from "./Cars";
 import ToDoList from "./ToDoList";
 import A1 from "./Assignment/A1";
 import A2 from "./Assignment/A2";
+import MC3 from "./UseEffect";
 
 function App() {
   
-  return (<A2/>);
+  return (<MC3/>);
 }
 
 export default App;
