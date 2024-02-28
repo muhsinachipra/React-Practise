@@ -21,12 +21,13 @@ import MC3 from "./UseEffect";
 import DigitalClock from "./DigitalClock";
 import ComponentA from "./ComponentA";
 import RefHook from "./RefHook";
+import StopWatch from "./StopWatch";
 
 function App() {
 
   return (
     <>
-      <RefHook />
+      <StopWatch />
     </>
   );
 }
