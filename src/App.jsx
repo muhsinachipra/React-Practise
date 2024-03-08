@@ -22,26 +22,45 @@ import DigitalClock from "./DigitalClock";
 import ComponentA from "./ComponentA";
 import RefHook from "./RefHook";
 import StopWatch from "./StopWatch";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 
-function App() {
+export default function App() {
 
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+  const [number, setNumber] = useState(2)
+  const [dark, setDark] = useState(true)
 
-  const handleResize = () => {
-    setWindowWidth(window.innerWidth)
-  }
-  useEffect(() => {
-    window.addEventListener('resize', handleResize)
+  const doubleNumber = useMemo(() => {
+    return slowFunction(number)
+  }, [number])
 
-    return () => {
-      window.removeEventListener('resize', handleResize)
+  const Theme = useMemo(() => {
+    return {
+      backgroundColor: dark ? 'black' : 'white',
+      color: dark ? 'white' : 'black'
     }
-  }, [])
+  }, [dark])
+
+
+  useEffect(() => {
+    console.log("Theme ")
+  }, [Theme])
+
 
   return (
-    <div>{windowWidth}</div>
+    <div>
+      <input type="number" value={number} onChange={(e) => {
+        setNumber(e.target.value);
+      }} />
+      <br />
+      <button onClick={() => setDark(prev => !prev)}>Change Theme</button>
+      <div style={Theme}>{doubleNumber}</div>
+    </div>
   );
+
 }
 
-export default App;
+
+const slowFunction = (number) => {
+  for (let i = 0; i < 1000000000; i++) { }
+  return number * 2
+}
