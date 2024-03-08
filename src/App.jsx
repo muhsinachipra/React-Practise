@@ -22,12 +22,29 @@ import DigitalClock from "./DigitalClock";
 import ComponentA from "./ComponentA";
 import RefHook from "./RefHook";
 import StopWatch from "./StopWatch";
+import React, { useState } from "react";
 
 function App() {
 
+  const [count, setCount] = useState(4)
+  const [theme, setTheme] = useState("blue")
+
+  function decreament() {
+    setCount(prevState => prevState - 1)
+    setTheme("green")
+  }
+
+  function increament() {
+    setCount(prevState => prevState + 1)
+    setTheme("red")
+  }
+
   return (
     <>
-      <DigitalClock />
+      <button onClick={decreament}>-</button>
+      <span>{count}</span>
+      <span>{theme}</span>
+      <button onClick={increament}>+</button>
     </>
   );
 }

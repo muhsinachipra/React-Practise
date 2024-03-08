@@ -245,7 +245,7 @@ li {
 
 
 
-body {
+/* body {
   background-image: url(assets/clockimg.jpg);
   background-position: center;
   background-repeat: no-repeat;
@@ -271,7 +271,7 @@ body {
   font-family: monospace;
   text-align: center;
   text-shadow: 3px 3px 5px hsl(0, 0%, 0%, 0.75);
-}
+} */
 
 
 
@@ -355,4 +355,26 @@ body {
 
 .reset-button:hover {
   background-color: hsl(205, 50%, 55%);
+} */
+
+
+
+
+
+
+/* ------------------------------------------------------------ */
+
+
+
+
+
+
+/* 
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: black;
+  color: white;
 } */
