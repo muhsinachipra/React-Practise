@@ -26,41 +26,32 @@ import React, { useEffect, useMemo, useState } from "react";
 
 export default function App() {
 
-  const [number, setNumber] = useState(2)
-  const [dark, setDark] = useState(true)
+  const [countOne, setCountOne] = useState(0)
+  const [countTwo, setCountTwo] = useState(0)
 
-  const doubleNumber = useMemo(() => {
-    return slowFunction(number)
-  }, [number])
+  
 
-  const Theme = useMemo(() => {
-    return {
-      backgroundColor: dark ? 'black' : 'white',
-      color: dark ? 'white' : 'black'
-    }
-  }, [dark])
-
-
-  useEffect(() => {
-    console.log("Theme ")
-  }, [Theme])
-
+  const isEven = useMemo(() => {
+    let i = 0
+    while (i < 2000000000) i++
+    return countOne % 2 === 0
+  },[countOne])
 
   return (
     <div>
-      <input type="number" value={number} onChange={(e) => {
-        setNumber(e.target.value);
-      }} />
-      <br />
-      <button onClick={() => setDark(prev => !prev)}>Change Theme</button>
-      <div style={Theme}>{doubleNumber}</div>
+      <div>
+        <button onClick={() => {
+          setCountOne(prev => prev + 1)
+        }}>CounterOne - {countOne}</button>
+        <span>{isEven ? 'even' : 'odd'}</span>
+      </div>
+      <div>
+        <button onClick={() => {
+          setCountTwo(prev => prev + 1)
+        }}>CounterTwo - {countTwo}</button>
+      </div>
     </div>
   );
 
 }
 
-
-const slowFunction = (number) => {
-  for (let i = 0; i < 1000000000; i++) { }
-  return number * 2
-}
