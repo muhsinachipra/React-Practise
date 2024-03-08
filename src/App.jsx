@@ -22,30 +22,25 @@ import DigitalClock from "./DigitalClock";
 import ComponentA from "./ComponentA";
 import RefHook from "./RefHook";
 import StopWatch from "./StopWatch";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 function App() {
 
-  const [count, setCount] = useState(4)
-  const [theme, setTheme] = useState("blue")
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth)
 
-  function decreament() {
-    setCount(prevState => prevState - 1)
-    setTheme("green")
+  const handleResize = () => {
+    setWindowWidth(window.innerWidth)
   }
+  useEffect(() => {
+    window.addEventListener('resize', handleResize)
 
-  function increament() {
-    setCount(prevState => prevState + 1)
-    setTheme("red")
-  }
+    return () => {
+      window.removeEventListener('resize', handleResize)
+    }
+  }, [])
 
   return (
-    <>
-      <button onClick={decreament}>-</button>
-      <span>{count}</span>
-      <span>{theme}</span>
-      <button onClick={increament}>+</button>
-    </>
+    <div>{windowWidth}</div>
   );
 }
 
