@@ -28,28 +28,16 @@ import React, { useCallback, useEffect, useMemo, useState } from "react";
 
 export default function App() {
 
-  const [number, setNumber] = useState(2)
-  const [dark, setDark] = useState(true)
+  const [count, setCount] = useState(0)
 
-  const getItems = useCallback((increamentor) => {
-    return [number + increamentor, number + 1 + increamentor, number + 2 + increamentor]
-  }, [number])
-
-  const color = {
-    backgroundColor: dark ? 'black' : 'white',
-    color: dark ? 'white' : 'black'
-  }
+  const handleClick = useCallback(() => {
+    setCount(c => c + 1)
+  }, [count])
 
   return (
     <div>
-      <input type="number" value={number} onChange={(e) => {
-        setNumber(parseInt(e.target.value))
-      }} />
-      <br />
-      <button onClick={() => setDark(prev => !prev)}>Change Theme</button>
-      <div style={color}>
-        <List2 getItems={getItems} />
-      </div>
+      {count}
+      <List2 onClick={handleClick} />
     </div>
   );
 
