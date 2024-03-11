@@ -22,33 +22,33 @@ import DigitalClock from "./DigitalClock";
 import ComponentA from "./ComponentA";
 import RefHook from "./RefHook";
 import StopWatch from "./StopWatch";
-import React, { useEffect, useMemo, useState } from "react";
+
+import List2 from "./List2";
+import React, { useCallback, useEffect, useMemo, useState } from "react";
 
 export default function App() {
 
-  const [countOne, setCountOne] = useState(0)
-  const [countTwo, setCountTwo] = useState(0)
+  const [number, setNumber] = useState(2)
+  const [dark, setDark] = useState(true)
 
-  
+  const getItems = useCallback((increamentor) => {
+    return [number + increamentor, number + 1 + increamentor, number + 2 + increamentor]
+  }, [number])
 
-  const isEven = useMemo(() => {
-    let i = 0
-    while (i < 2000000000) i++
-    return countOne % 2 === 0
-  },[countOne])
+  const color = {
+    backgroundColor: dark ? 'black' : 'white',
+    color: dark ? 'white' : 'black'
+  }
 
   return (
     <div>
-      <div>
-        <button onClick={() => {
-          setCountOne(prev => prev + 1)
-        }}>CounterOne - {countOne}</button>
-        <span>{isEven ? 'even' : 'odd'}</span>
-      </div>
-      <div>
-        <button onClick={() => {
-          setCountTwo(prev => prev + 1)
-        }}>CounterTwo - {countTwo}</button>
+      <input type="number" value={number} onChange={(e) => {
+        setNumber(parseInt(e.target.value))
+      }} />
+      <br />
+      <button onClick={() => setDark(prev => !prev)}>Change Theme</button>
+      <div style={color}>
+        <List2 getItems={getItems} />
       </div>
     </div>
   );
