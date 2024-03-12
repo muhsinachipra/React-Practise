@@ -22,23 +22,28 @@ import DigitalClock from "./DigitalClock";
 import ComponentA from "./ComponentA";
 import RefHook from "./RefHook";
 import StopWatch from "./StopWatch";
-
 import List2 from "./List2";
+
+import FunctionalComponent from "./FunctionContextComponent";
+import ClassComponent from "./ClassContextComponent";
 import React, { useCallback, useEffect, useMemo, useState } from "react";
+
+export const ThemeContext = React.createContext();
 
 export default function App() {
 
-  const [count, setCount] = useState(0)
+  const [darkTheme, setDarkTheme] = useState(true);
 
-  const handleClick = useCallback(() => {
-    setCount(c => c + 1)
-  }, [count])
+  function toggleTheme() {
+    setDarkTheme(prev => !prev)
+  }
 
   return (
-    <div>
-      {count}
-      <List2 onClick={handleClick} />
-    </div>
+    <ThemeContext.Provider value={darkTheme}>
+      <button onClick={toggleTheme}>Toggle Theme</button>
+      <FunctionalComponent />
+      <ClassComponent />
+    </ThemeContext.Provider>
   );
 
 }
