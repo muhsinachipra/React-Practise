@@ -25,25 +25,15 @@ import StopWatch from "./StopWatch";
 import List2 from "./List2";
 
 import FunctionalComponent from "./FunctionContextComponent";
-import ClassComponent from "./ClassContextComponent";
-import React, { useCallback, useEffect, useMemo, useState } from "react";
-
-export const ThemeContext = React.createContext();
+import { ThemeProvider } from "./ThemeContext";
+import React from "react";
 
 export default function App() {
 
-  const [darkTheme, setDarkTheme] = useState(true);
-
-  function toggleTheme() {
-    setDarkTheme(prev => !prev)
-  }
-
   return (
-    <ThemeContext.Provider value={darkTheme}>
-      <button onClick={toggleTheme}>Toggle Theme</button>
+    <ThemeProvider>
       <FunctionalComponent />
-      <ClassComponent />
-    </ThemeContext.Provider>
+    </ThemeProvider>
   );
 
 }
