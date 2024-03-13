@@ -23,18 +23,17 @@ import ComponentA from "./ComponentA";
 import RefHook from "./RefHook";
 import StopWatch from "./StopWatch";
 import List2 from "./List2";
-
 import FunctionalComponent from "./FunctionContextComponent";
-import { ThemeProvider } from "./ThemeContext";
-import React from "react";
+
+import UseReducer2 from "./UseReducer2";
+
+
 
 export default function App() {
 
   return (
-    <ThemeProvider>
-      <FunctionalComponent />
-    </ThemeProvider>
-  );
+    <UseReducer2/>
+  )
 
 }
 

@@ -1,19 +1,19 @@
-import ComponentB from "./ComponentB"
-import React, { useState, createContext } from "react"
+import React, { createContext, useState } from 'react'
+import ComponentB from './ComponentB'
 
 export const UserContext = createContext()
 
-export default function ComponentA() {
-
-    const [user, setUser] = useState('Muhsin')
-
+function ComponentA() {
+    const [user, setUser] = useState('muhsin')
     return (
         <div className="box">
-            <h1>ComponentA</h1>
-            <h2>{`Hello ${user}`}</h2>
             <UserContext.Provider value={user}>
+                <h1>ComponentA</h1>
+                <h2>{`hi ${user}`}</h2>
                 <ComponentB />
             </UserContext.Provider>
         </div>
     )
 }
+
+export default ComponentA
