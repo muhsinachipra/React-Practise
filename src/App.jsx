@@ -24,15 +24,17 @@ import RefHook from "./RefHook";
 import StopWatch from "./StopWatch";
 import List2 from "./List2";
 import FunctionalComponent from "./FunctionContextComponent";
-
 import UseReducer2 from "./UseReducer2";
+import UseRef from "./UseRef";
+import Test from "./Test";
+
 
 
 
 export default function App() {
 
   return (
-    <UseReducer2/>
+    <Test/>
   )
 
 }
