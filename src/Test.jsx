@@ -1,37 +1,70 @@
-import { useReducer } from "react";
+import { useState } from 'react';
+import Child from './Child';  // Import the Child component
 
+const Parent = () => {
+    const [message, setMessage] = useState('Hello from Parent!');  // Parent's state
 
-
-function reducer(state, action) {
-    switch (action.type) {
-        case "increment":
-            return { count: state.count + 1 }
-        case "decrement":
-            return { count: state.count - 1 }
-        default:
-            return state
-    }
-}
-
-
-export default function UseReducer2() {
-    const [state, dispatch] = useReducer(reducer, { count: 0 })
-
-    function increment() {
-        dispatch({ type: "increment" })
-    }
-    function decrement() {
-        dispatch({ type: "decrement" })
-    }
+    const updateMessage = (newMessage) => {
+        setMessage(newMessage);
+    };
 
     return (
         <div>
-      <button onClick={increment}>+</button>
-      {state.count}
-      <button onClick={decrement}>-</button>
-    </div>
-    )
-}
+            <h1>Parent Component</h1>
+            <p>Message: {message}</p>
+            <Child message={message} onUpdateMessage={updateMessage} />
+        </div>
+    );
+};
+
+export default Parent;
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import { useReducer } from "react";
+
+
+
+// function reducer(state, action) {
+//     switch (action.type) {
+//         case "increment":
+//             return { count: state.count + 1 }
+//         case "decrement":
+//             return { count: state.count - 1 }
+//         default:
+//             return state
+//     }
+// }
+
+
+// export default function UseReducer2() {
+//     const [state, dispatch] = useReducer(reducer, { count: 0 })
+
+//     function increment() {
+//         dispatch({ type: "increment" })
+//     }
+//     function decrement() {
+//         dispatch({ type: "decrement" })
+//     }
+
+//     return (
+//         <div>
+//       <button onClick={increment}>+</button>
+//       {state.count}
+//       <button onClick={decrement}>-</button>
+//     </div>
+//     )
+// }
 
 
 

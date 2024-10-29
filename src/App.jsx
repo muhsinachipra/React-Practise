@@ -26,15 +26,29 @@
 // import FunctionalComponent from "./FunctionContextComponent";
 // import UseReducer2 from "./UseReducer2";
 // import UseRef from "./UseRef";
+import { CounterProvider } from "./ContextCounter/CounterContext";
+import CounterDisplay from "./ContextCounter/CounterDisplay";
+import CounterIncrement from "./ContextCounter/CounterIncrement";
 import Test from "./Test";
 // import UseCallback from "./UseCallback"
-
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 
 export default function App() {
 
   return (
-    <Test/>
+    <CounterProvider>
+      <Router>
+        <div>
+          <h1>Simple Counter App with Context</h1>
+          <Routes>
+            <Route path="/" element={<Test />} />
+            <Route path="/increment" element={<CounterIncrement />} />
+            <Route path="/counter-display" element={<CounterDisplay />} />
+          </Routes>
+        </div>
+      </Router>
+    </CounterProvider>
   )
 
 }
