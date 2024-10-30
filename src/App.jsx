@@ -26,6 +26,7 @@
 // import FunctionalComponent from "./FunctionContextComponent";
 // import UseReducer2 from "./UseReducer2";
 // import UseRef from "./UseRef";
+import App2 from "./albumGallery/App2";
 import { CounterProvider } from "./ContextCounter/CounterContext";
 import CounterDisplay from "./ContextCounter/CounterDisplay";
 import CounterIncrement from "./ContextCounter/CounterIncrement";
@@ -45,6 +46,7 @@ export default function App() {
             <Route path="/" element={<Test />} />
             <Route path="/increment" element={<CounterIncrement />} />
             <Route path="/counter-display" element={<CounterDisplay />} />
+            <Route path="/album" element={<App2 />} />
           </Routes>
         </div>
       </Router>
