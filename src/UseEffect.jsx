@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 export default function MC3() {
 
@@ -47,7 +47,7 @@ export default function MC3() {
 
     useEffect(() => {
         document.title = `SIZE ${width} X ${height}`
-    }, [])
+    }, [width, height])
 
     const handleResize = () => {
         setHeight(window.innerHeight)

@@ -1,4 +1,3 @@
-import React from 'react'
 import { useTheme, useThemeUpdate } from './ThemeContext'
 
 function FunctionalComponent() {

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react"
+import { useState, useEffect, useRef } from "react"
 
 export default function StopWatch() {
 
@@ -46,7 +46,7 @@ export default function StopWatch() {
         seconds = String(seconds).padStart(2, "0")
         milliseconds = String(milliseconds).padStart(2, "0")
 
-        return `${minutes}:${seconds}:${milliseconds}`
+        return `${hours}:${minutes}:${seconds}:${milliseconds}`
     }
 
     return (

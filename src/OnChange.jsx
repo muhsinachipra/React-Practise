@@ -2,7 +2,7 @@
 //            ex. <input>, <textarea>, <select>, <radio>
 //            Triggers a function every time the value of the input changes
 
-import react, { useState } from "react";
+import { useState } from "react";
 
 export default function MyComponent() {
   const [name, setName] = useState("Guest");
@@ -49,7 +49,7 @@ export default function MyComponent() {
       </select>
       <p>payment:{payment}</p>
       <hr />
-      
+
       <label>
         <input
           type="radio"
