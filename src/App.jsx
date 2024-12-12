@@ -33,7 +33,7 @@ import CounterIncrement from "./ContextCounter/CounterIncrement";
 import Test from "./Test";
 // import UseCallback from "./UseCallback"
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-
+import ErrorBoundary from "./ErrorBoundary";
 
 export default function App() {
 
@@ -42,12 +42,14 @@ export default function App() {
       <Router>
         <div>
           <h1>Simple Counter App with Context</h1>
-          <Routes>
-            <Route path="/" element={<Test />} />
-            <Route path="/increment" element={<CounterIncrement />} />
-            <Route path="/counter-display" element={<CounterDisplay />} />
-            <Route path="/album" element={<App2 />} />
-          </Routes>
+          <ErrorBoundary>
+            <Routes>
+              <Route path="/" element={<Test />} />
+              <Route path="/increment" element={<CounterIncrement />} />
+              <Route path="/counter-display" element={<CounterDisplay />} />
+              <Route path="/album" element={<App2 />} />
+            </Routes>
+          </ErrorBoundary>
         </div>
       </Router>
     </CounterProvider>
